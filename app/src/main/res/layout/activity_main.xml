@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF393939"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo_serie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableTop="@drawable/ic_seta_baixo_serie_24dp"
+        android:text="House of cards"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temporada_episodio_serie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="S2:E4"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/titulo_serie"
+        app:layout_constraintStart_toStartOf="@+id/titulo_serie"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_serie" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia_vertical_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia_vertical_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia_vertical_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia_horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="115dp" />
+
+    <ImageView
+        android:id="@+id/ic_comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_comentarios_serie_24"
+        app:layout_constraintBottom_toBottomOf="@id/guia_horizontal_1"
+        app:layout_constraintLeft_toRightOf="@id/guia_vertical_1"
+        app:layout_constraintTop_toBottomOf="@id/temporada_episodio_serie" />
+
+    <ImageView
+        android:id="@+id/ic_classificacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_classificacao_24"
+        app:layout_constraintBottom_toBottomOf="@id/guia_horizontal_1"
+        app:layout_constraintLeft_toLeftOf="@id/guia_vertical_2"
+        app:layout_constraintTop_toBottomOf="@id/temporada_episodio_serie" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guia_vertical_3"
+        app:layout_constraintTop_toBottomOf="@id/temporada_episodio_serie"
+        app:layout_constraintBottom_toBottomOf="@id/guia_horizontal_1"
+        android:background="@drawable/ic_controle_volume_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/guia_vertical_4"
+        app:layout_constraintTop_toBottomOf="@id/temporada_episodio_serie"
+        app:layout_constraintBottom_toBottomOf="@id/guia_horizontal_1"
+        android:background="@drawable/ic_listar_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
